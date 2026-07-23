@@ -44,8 +44,11 @@ function RevealText({ text, delay = 0 }: { text: string; delay?: number }) {
                   {word.split("").map((char, ci) => (
                     <motion.span
                       key={ci}
-                      initial={{ opacity: 0, y: 24, filter: "blur(8px)" }}
-                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      // Pas de filter: blur() ici — combiné à .text-gradient
+                      // (background-clip: text), ça rend le texte invisible
+                      // sur beaucoup de navigateurs mobiles (bug WebKit connu).
+                      initial={{ opacity: 0, y: 24 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{
                         delay: delay + (start + ci) * 0.03,
                         duration: 0.5,
