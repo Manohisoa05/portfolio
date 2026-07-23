@@ -1,0 +1,5 @@
+Placez ici vos vidéos (facultatives) :
+- hero-bg.webm et hero-bg.mp4  → arrière-plan du Hero (muet, compressé, < 3 Mo)
+- demo-bibliotheque.mp4, demo-banque.mp4, demo-dolibarr.mp4 → démonstrations des projets
+
+Si un fichier est absent, le site bascule automatiquement sur les images de secours.
